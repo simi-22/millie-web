@@ -1,0 +1,29 @@
+mysql
+
+create table member( /* comment 테이블 생성*/
+	num int not null auto_increment, /*num필드 생성, 숫자형, 빈값 허용 불가능, 레코드가 추가되면 1,2,3 순으로 자동 생성
+	id text not null, /*comment 필드 생성, 문자형, 빈값 허용 불가능
+	pw text not null,/*comment 필드 생성, 문자형, 빈값 허용 불가능
+	name text not null,/*comment 필드 생성, 문자형, 빈값 허용 불가능
+	primary key(num)/*기본키 지정 (식별자 필드)
+)
+
+주소 myadmin
+왼쪽 상단 아이디 클릭
+상단 중앙에 가져오기
+파일 선택
+
+
+<form>
+	<input type="text" id="id" name="id" placeholder="">
+	<input type="password" id="pw" name="pw">
+	<input type="text" id="name" name="name">
+	
+	<button type="button">회원가입</button>
+</form>
+
+<script>
+$('button').click(function(){
+	$('form').submit();
+})
+</script>

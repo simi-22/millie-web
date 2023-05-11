@@ -1,0 +1,27 @@
+https://d3udu241ivsax2.cloudfront.net/common/video/brand/objectbook.mp4
+
+
+content: "\e805"
+
+
+https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook2.mp4?v1
+
+
+
+setTimeout(function(){
+style.display = 'none'
+}, 500)
+
+
+
+this = 선택자 자기 자신
+switch_val  =  0;
+연사방지
+
+값 앞뒤로 / =정규표현식을 쓰겠다
+^￦d : 첫문자가 숫자인 것만 허용
+정규표현식객체
+
+apprence:none =input type number의 화살표 없어짐
+
+<video tabindex="-1" class="video-stream html5-main-video" webkit-playsinline="" playsinline="" controlslist="nodownload" style="width: 415px; height: 415px; left: 0px; top: 0px;" src="blob:https://www.youtube.com/039e0085-9b1e-4132-92eb-9007cbd82a72"></video>
