@@ -14,7 +14,7 @@ create table member( /* comment 테이블 생성*/
 파일 선택
 
 
-<form>
+<form method="post" action="member_insert.php">
 	<input type="text" id="id" name="id" placeholder="">
 	<input type="password" id="pw" name="pw">
 	<input type="text" id="name" name="name">
@@ -27,3 +27,12 @@ $('button').click(function(){
 	$('form').submit();
 })
 </script>
+
+member_insert.php
+
+<?php
+$host
+
+
+
+?>

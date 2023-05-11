@@ -93,7 +93,6 @@
 
 
 
-
 #object{
     background-color: #f7f7f7;
 }
@@ -171,15 +170,57 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none; /*firefox*/
+    cursor: grab;
+}
+#infinite .bookgroup-container ul::-webkit-scrollbar {
+	display:none /* Chrome , Safari , Opera */
+}
+#infinite .bookgroup-container ul li:first-of-type dl{
+    margin-left: 0;
+}
+#infinite .bookgroup-container ul li dl{
+    margin-left: 24px;
+}
+#infinite .bookgroup-container ul li dl dt{
+    position: relative;
+    margin-bottom: 10px;
 }
 #infinite .bookgroup-container ul li dl dt img{
     width: 145px;
     height: 213px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
+#infinite .bookgroup-container ul li dl dt span{
+    position: absolute;
+    text-indent: -99999px;
+}
+#infinite .bookgroup-container ul li dl dt span:first-of-type{
+    top: 0;
+    right: -7px;
+    width: 40px;
+    height: 34px;
+}
+#infinite .bookgroup-container ul li dl dt span:nth-of-type(2){
+    top: 25px;
+    right: -7px;
+    width: 40px;
+    height: 34px;
+}
+
 #infinite .bookgroup-container ul li dl dd{
     width: 145px;
     text-align: start;
+}
+#infinite .bookgroup-container ul li dl dd .badge{
+    width: 42px;
+    height: 18px;
+    margin-bottom: 5px;
+    margin-right: 103px;
+}
+#infinite .bookgroup-container ul li dl dd p{
+    margin-bottom: 5px;
 }
 #infinite .bookgroup-container ul li dl dd p:first-of-type{
     font-weight: bold;
@@ -190,10 +231,39 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    color: #6f6f6f;
+    font-weight: bold;
 }
-#infinite .bookgroup-container ul li dl dd span{
+#infinite .bookgroup-container ul li dl dd .reading span{
     font-size: 14px;
+    color: #6f6f6f;
+    font-weight: bold;
 }
+#infinite .bookgroup-container ul li dl dd .reading span:first-of-type{
+    position: relative;
+    padding-left: 20px;
+}
+#infinite .bookgroup-container ul li dl dd .reading span:first-of-type::after{
+    position: absolute;
+    top: 0;
+    right: -10px;
+    content: "|";
+}
+#infinite .bookgroup-container ul li dl dd .reading span:first-of-type::before{
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    content: "";
+    background: url(../img/plus.svg);
+    background-size: contain;
+}
+
+#infinite .bookgroup-container ul li dl dd .reading span:last-of-type{
+    padding-left: 15px;
+}
+
 
 
 
@@ -217,6 +287,48 @@
     box-sizing: border-box;
 }
 
+#infinite .bookgroup-container ul li dl dt span.free{
+    background: url(../img/free.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#infinite .bookgroup-container ul li dl dt span.audio{
+    background: url(../img/badge-readingbook.6d3d4deb89226cd278417a183150b386.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#infinite .bookgroup-container ul li dl dt span.summary{
+    background: url(../img/badge-short.57106ab2f76f3e4e107a4ccb19db5e6e.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#infinite .bookgroup-container ul li dl dt span.full{
+    background: url(../img/badge-full.a98c7199ab8829b059a2386c6f91efca.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.reader{
+    background: url(../img/label-reader.76ca1a707ad27c4f4f1d948a781c8d7f.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.mp3{
+    background: url(../img/label-mp3.d91abe449f24383648385744bb3c3d5c.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.aitts{
+    background: url(../img/label-ai.f1b13ffd665eb8f701054151aaa43d9a.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 @media all and (max-width: 1050px){
     .mainv-content p{
