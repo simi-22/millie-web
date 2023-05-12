@@ -18,14 +18,13 @@ mMenuButton.addEventListener('click', mMenuActive)
 const objectVideoPlay = () => {
     playButton.classList.add('hidden');
     videoBox.classList.add('show');
-    setTimeout(stopVideo,33000);
+    setTimeout(stopVideo,33600);
 }
 
 const stopVideo = () => {
     videoBox.classList.remove('show');
     playButton.classList.remove('hidden');
 }
-
 
 
 playButton.addEventListener('click', objectVideoPlay)

@@ -51,7 +51,8 @@
 }
 
 
-
+/**/
+/**/
 #waiting-book{
 }
 #waiting-book h2{
@@ -92,7 +93,8 @@
 }
 
 
-
+/**/
+/**/
 #object{
     background-color: #f7f7f7;
 }
@@ -152,6 +154,9 @@
     top: 15px;
     right: 20px;
 }
+
+/**/
+/**/
 #infinite{
     width: 100%;
     text-align: center;
@@ -161,33 +166,29 @@
     font-size: 20px;
     margin-bottom: 25px;
     margin-top: 50px;
+    margin-left: 24px;
 }
 #infinite .bookgroup-container{
-    max-width: 1153px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 #infinite .bookgroup-container ul{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    overflow-x: auto;
-    scrollbar-width: none; /*firefox*/
-    cursor: grab;
+    
 }
-#infinite .bookgroup-container ul::-webkit-scrollbar {
+.booklist-wrap::-webkit-scrollbar {
 	display:none /* Chrome , Safari , Opera */
 }
 #infinite .bookgroup-container ul li:first-of-type dl{
     margin-left: 0;
 }
 #infinite .bookgroup-container ul li dl{
-    margin-left: 24px;
+   margin-left: 24px;
 }
-#infinite .bookgroup-container ul li dl dt{
+ul li dl dt{
     position: relative;
     margin-bottom: 10px;
 }
-#infinite .bookgroup-container ul li dl dt img{
+ul li dl dt img{
     width: 145px;
     height: 213px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -222,23 +223,7 @@
 #infinite .bookgroup-container ul li dl dd p{
     margin-bottom: 5px;
 }
-#infinite .bookgroup-container ul li dl dd p:first-of-type{
-    font-weight: bold;
-    font-size: 16px;
-}
-#infinite .bookgroup-container ul li dl dd p:nth-of-type(n+2){
-    font-size: 14px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    color: #6f6f6f;
-    font-weight: bold;
-}
-#infinite .bookgroup-container ul li dl dd .reading span{
-    font-size: 14px;
-    color: #6f6f6f;
-    font-weight: bold;
-}
+
 #infinite .bookgroup-container ul li dl dd .reading span:first-of-type{
     position: relative;
     padding-left: 20px;
@@ -266,6 +251,56 @@
 
 
 
+/**/
+/**/
+#interest{}
+#interest .book-section{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#interest-slide{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 400px;
+    overflow: hidden;
+}
+#interest-slide div{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#interest-slide div:nth-of-type(n+2){
+    display: none;
+}
+#interest ul li{
+    margin-left: 24px;
+}
+#interest ul li:first-of-type{
+    margin-left: 0;
+}
+
+#interest ul li dl dt{
+    position: relative;
+    margin-bottom: 10px;
+}
+#interest ul li dl dt img{
+    width: 145px;
+    height: 213px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+#interest ul li dl dt span{
+    position: absolute;
+    text-indent: -99999px;
+}
+
+
+
+
+
+
 
 .ft-h{
     font-size: 49px;
@@ -276,10 +311,10 @@
     margin-bottom: 70px;
 }
 .hidden{
-    display: none;
+    display: none !important;
 }
 .show{
-    display: block;
+    display: block !important;
 }
 .wrap{
     text-align: center;
@@ -329,6 +364,41 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.booklist-wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 24px;
+    overflow-x: auto;
+    scrollbar-width: none; /*firefox*/
+    cursor: grab;
+}
+
+.title{
+    width: 145px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: start;
+}
+.author{
+    width: 145px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #6f6f6f;
+    font-weight: bold;
+    text-align: start;
+}
+.reading{
+    width: 145px;
+    font-size: 14px;
+    color: #6f6f6f;
+    font-weight: bold;
+    text-align: start;
+}
+
 
 @media all and (max-width: 1050px){
     .mainv-content p{
@@ -418,5 +488,3 @@
         height: 400px;
     }
 }
-
-
