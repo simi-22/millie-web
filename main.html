@@ -518,11 +518,11 @@
         <br>인기 분야 책들을 확인해보세요
         </p>
         <ul class="book-section">
-            <li><button>주식</button></li>
-            <li><button>영어</button></li>
-            <li><button>고전</button></li>
-            <li><button>인테리어</button></li>
-            <li><button>다이어트</button></li>
+            <li><button id="stock-button" class="button-bg">주식</button></li>
+            <li><button id="english-button">영어</button></li>
+            <li><button id="classic-button">고전</button></li>
+            <li><button id="interior-button">인테리어</button></li>
+            <li><button id="diet-button">다이어트</button></li>
         </ul>
         <div id="interest-slide">
             <div class="stock">
@@ -579,6 +579,7 @@
                     <dl>
                         <dt>
                             <img src="img/book/field1-dd3594ff816746038b1a2d026780fdb2.webp" alt="만화 주식투자 무작정 따라하기 표지">
+                            <span class="pdf-book"></span>
                         </dt>
                         <dd>
                             <div class="badge reader"></div>
@@ -629,6 +630,7 @@
                     <dl>
                         <dt>
                             <img src="img/book/field1-693451b3752d4226b5dabeaff7bbe4db.webp" alt="한 권으로 끝내는 배당주 투자 표지">
+                            <span class="pdf-book"></span>
                         </dt>
                         <dd>
                             <div class="badge aitts"></div>
@@ -646,7 +648,7 @@
         
 
 
-        <div class="english">
+        <div class="english hidden">
             <ul class="booklist-wrap">
             <li>
                 <dl>
@@ -684,6 +686,7 @@
                 <dl>
                     <dt>
                         <img src="img/book/field2-01cdc6b96b284279b5799df217d8b1ad.webp" alt="나 혼자만 알고 싶은 영어책:순한 맛 표지">
+                        <span class="pdf-book"></span>
                     </dt>
                     <dd>
                         <div class="badge mp3"></div>
@@ -700,6 +703,7 @@
                 <dl>
                     <dt>
                         <img src="img/book/field2-0ac24c544a0a4e5396d7b305d2a6c3ae.webp" alt="한국인 화자 시점 영어 회화 표지">
+                        <span class="pdf-book"></span>
                     </dt>
                     <dd>
                         <div class="badge reader"></div>
@@ -716,6 +720,7 @@
                 <dl>
                     <dt>
                         <img src="img/book/field2-6a3485d370ca4e64a9779837e21da913.webp" alt="사용빈도 1억 영어회와 표현 표지">
+                        <span class="pdf-book"></span>
             
                     </dt>
                     <dd>
@@ -768,7 +773,7 @@
    
 
 
-    <div class="classic">
+    <div class="classic hidden">
         <ul class="booklist-wrap">
         <li>
             <dl>
@@ -875,12 +880,13 @@
 
 
 
-    <div class="interior">
+    <div class="interior hidden">
         <ul class="booklist-wrap">
         <li>
             <dl>
                 <dt>
                     <img src="img/book/field4-33c0a35433e943e99daf96884e621537.webp" alt="블루체크의 코바늘 손뜨게 수업 표지">
+                    <span class="pdf-book"></span>
                 </dt>
                 <dd>
                     <div class="badge reader"></div>
@@ -897,6 +903,7 @@
             <dl>
                 <dt>
                     <img src="img/book/field4-bf50904e4d6740a0bd4df7e208e84baa.webp" alt="패브릭 손뜨개 표지">
+                    <span class="pdf-book"></span>
                 </dt>
                 <dd>
                     <div class="badge reader"></div>
@@ -913,6 +920,7 @@
             <dl>
                 <dt>
                     <img src="img/book/field4-b70cb1890f914bf6b89fd063fe141bdc.webp" alt="로제의 모티브 손뜨개 소품 표지">
+                    <span class="pdf-book"></span>
                 </dt>
                 <dd>
                     <div class="badge mp3"></div>
@@ -929,6 +937,7 @@
             <dl>
                 <dt>
                     <img src="img/book/field4-3f2cb6972b7e48fba14e36bb237c9c2b.webp" alt="코코지니의 친절한 재봉틀 교실 표지">
+                    <span class="pdf-book"></span>
                 </dt>
                 <dd>
                     <div class="badge reader"></div>
@@ -945,7 +954,7 @@
             <dl>
                 <dt>
                     <img src="img/book/field4-e7a8327c1b2f4026ad32fe17fd6bcb11.webp" alt="까막의 감성 인테리어 손뜨개 표지">
-        
+                    <span class="pdf-book"></span>
                 </dt>
                 <dd>
                     <div class="badge reader"></div>
@@ -962,8 +971,7 @@
             <dl>
                 <dt>
                     <img src="img/book/field4-9c119af849d045d88be1a38500da0da8.webp" alt="낭만 가득 프랑스 자수 표지">
-                    <span class="audio"></span>
-                    <span class="full"></span>
+                    <span class="pdf-book"></span>
                 </dt>
                 <dd>
                     <div class="badge mp3"></div>
@@ -980,7 +988,7 @@
             <dl>
                 <dt>
                     <img src="img/book/field4-5b811a27222d4f2882378cc4aa63b155.webp" alt="로제의 빈티지 손뜨개 표지">
-        
+                    <span class="pdf-book"></span>
                 </dt>
                 <dd>
                     <div class="badge aitts"></div>
@@ -997,7 +1005,7 @@
     </div>
 
 
-    <div class="diet">
+    <div class="diet hidden">
         <ul class="booklist-wrap">
         <li>
             <dl>
@@ -1019,6 +1027,7 @@
             <dl>
                 <dt>
                     <img src="img/book/field4-c199483f86d8ccb68bb3b115c1bf7efe.jpg" alt="죄수 운동법 표지">
+                    <span class="pdf-book"></span>
                 </dt>
                 <dd>
                     <div class="badge reader"></div>
@@ -1035,6 +1044,7 @@
             <dl>
                 <dt>
                     <img src="img/book/field4-94456e0deef2471d8748bce63daffeb4.webp" alt="근육저승사자 양치승의 지옥 트레이닝 표지">
+                    <span class="pdf-book"></span>
                 </dt>
                 <dd>
                     <div class="badge mp3"></div>
@@ -1067,7 +1077,7 @@
             <dl>
                 <dt>
                     <img src="img/book/field4-a7363250be924d18901a74ec0a15bca3.webp" alt="닥치고 데스런 스트레칭 표지">
-        
+                    <span class="pdf-book"></span>
                 </dt>
                 <dd>
                     <div class="badge reader"></div>
@@ -1102,7 +1112,7 @@
             <dl>
                 <dt>
                     <img src="img/book/field1-693451b3752d4226b5dabeaff7bbe4db.webp" alt="헬스보이의 지속가능한 운동법 표지">
-        
+                    <span class="pdf-book"></span>
                 </dt>
                 <dd>
                     <div class="badge aitts"></div>
@@ -1120,7 +1130,65 @@
     </div>
     </section>
 
+    <!---->
+    <!---->
+    <section id="complete" class="wrap">
+        <h2 class="ft-h">당신이 끝까지 읽을 책을<br>
+            알려주는 완독지수
+        </h2>
+        <p class="ft-p">
+            350만 밀리회원이 먼저 읽고
+        <br>다 읽을 확률과 예상 시간을 알려드려요
+        </p>
+        <div class="complete-inner">
+            <div class="phone-mokup">
+                <img src="img/reading-mock.3691c0a919be9925e90a19a17794050e.png" alt="밀리 완독지수">
+                <p><img src="img/reading-tooltip.af41ece6e348d4b800680256f27a9892.png" alt="밀리 완독지수"></p>
+                <span class="card1"><img src="img/reading-card02.f1d517fe9b18dc4a7fcdd58f7f57afbe.png" alt="마니아카드"></span>
+                <span class="card1"><img src="img/reading-card01.a091cde3f19afee102558704e82eefe6.png" alt="홀릭카드"></span>
+                <span class="card1"><img src="img/reading-card03.099696781998fdcfbc88f69f81ddd990.png" alt="밀리픽카드"></span>
+                <span class="card1"><img src="img/reading-card04.178fde7cba62b12c0e4c5ef28fa01528.png" alt="히든카드"></span>
+            </div>
+        </div>
+    </section>
 
+
+
+    <!---->
+    <!---->
+    <section id="free-month" class="wrap">
+        <h2 class="ft-h">언제든 해지 가능!<br>
+            첫 달 무료로 가볍게
+        </h2>
+        <p class="ft-p">
+            상황에 맞게 원하는 요금제를
+        <br>자유롭게 선택하세요
+        </p>
+        <div class="free-month-wrap">
+            <div class="price">
+                <ul>
+                    <li>
+                        <strong>전자책 정기구독</strong>
+                        <div><p>월</p><span>9,900</span><p>원</p></div>
+                        <div><p>연</p><span>99,000</span><p>원</p></div>
+                        <p>밀리에서 제공하는 콘텐츠를 무제한으로</p>
+                    </li>
+                    <li>
+                        <strong>종이책 정기구독</strong>
+                        <div><p>월</p><span>15,900</span><b>원</b></div>
+                        <div><p>연</p><span>183,000</span><b>원</b></div>
+                        <p>밀리에서 제공하는 콘텐츠를 무제한으로 보고<br>
+                            2달에 1번 종이책+전자책 배송까지
+                        </p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>gg</li>
+                    <li>vv</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
 
 

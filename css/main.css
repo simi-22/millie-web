@@ -181,9 +181,7 @@
 #infinite .bookgroup-container ul li:first-of-type dl{
     margin-left: 0;
 }
-#infinite .bookgroup-container ul li dl{
-   margin-left: 24px;
-}
+
 ul li dl dt{
     position: relative;
     margin-bottom: 10px;
@@ -224,17 +222,17 @@ ul li dl dt img{
     margin-bottom: 5px;
 }
 
-#infinite .bookgroup-container ul li dl dd .reading span:first-of-type{
+.reading span:first-of-type{
     position: relative;
     padding-left: 20px;
 }
-#infinite .bookgroup-container ul li dl dd .reading span:first-of-type::after{
+.reading span:first-of-type::after{
     position: absolute;
     top: 0;
     right: -10px;
     content: "|";
 }
-#infinite .bookgroup-container ul li dl dd .reading span:first-of-type::before{
+.reading span:first-of-type::before{
     position: absolute;
     top: 2px;
     left: 0;
@@ -245,7 +243,7 @@ ul li dl dt img{
     background-size: contain;
 }
 
-#infinite .bookgroup-container ul li dl dd .reading span:last-of-type{
+.reading span:last-of-type{
     padding-left: 15px;
 }
 
@@ -256,30 +254,36 @@ ul li dl dt img{
 #interest{}
 #interest .book-section{
     display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
+    justify-content: flex-start;
+    max-width: 1200px;
+    padding-bottom: 30px;
+    margin: 0 auto;
 }
+#interest .book-section li{
+    margin-left: 10px;
+}
+#interest .book-section li button{
+    padding: 5px 20px;
+    outline: none;
+    border: 1px solid #242424;
+    border-radius: 25px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    color: #242424;
+    font-weight: bold;
+}
+#interest .book-section li:first-of-type{
+    margin-left: 24px!important;
+}
+#interest .book-section li button{}
 
 #interest-slide{
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
     height: 400px;
-    overflow: hidden;
-}
-#interest-slide div{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-#interest-slide div:nth-of-type(n+2){
-    display: none;
-}
-#interest ul li{
-    margin-left: 24px;
-}
-#interest ul li:first-of-type{
-    margin-left: 0;
+    
 }
 
 #interest ul li dl dt{
@@ -295,10 +299,155 @@ ul li dl dt img{
     position: absolute;
     text-indent: -99999px;
 }
+#interest ul li dl dt span{
+    position: absolute;
+    text-indent: -99999px;
+}
+#interest ul li dl dt span:first-of-type{
+    top: 0;
+    right: -7px;
+    width: 40px;
+    height: 34px;
+}
+#interest ul li dl dt span:nth-of-type(2){
+    top: 25px;
+    right: -7px;
+    width: 40px;
+    height: 34px;
+}
+#interest .classic .booklist-wrap{
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+#interest .classic .booklist-wrap li{
+    margin-left: 24px;
+}
+
+
+/**/
+/**/
+
+#complete{
+    background-color: #f7f7f7;
+}
+#complete.wrap{
+    padding-bottom: 0;
+}
+#complete .complete-inner{
+    max-width: 1440px; 
+    margin: 0 auto; 
+    text-align: center;
+}
+#complete .complete-inner .phone-mokup{
+    position: relative;
+    display: inline-block;
+    width: 400px;
+}
+#complete .complete-inner .phone-mokup img{
+    width: 100%;
+    object-position: center;
+    padding-left: 20px;
+}
+#complete .complete-inner .phone-mokup p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -215px;
+    width: 400px;
+    box-shadow: 10px 10px 40px rgba(0,0,0,.1);
+}
+#complete .complete-inner .phone-mokup span{
+    position: absolute;
+    display: block;
+    width: 170px;
+    height: 170px;
+}
+#complete .complete-inner .phone-mokup span img{
+    width: 100%;
+}
+#complete .complete-inner .phone-mokup span:first-of-type{
+    top: 10%;
+    left: -50%;
+}
+#complete .complete-inner .phone-mokup span:nth-of-type(2){
+    top: 50%;
+    left: -70%;
+}
+#complete .complete-inner .phone-mokup span:nth-of-type(3){
+    top: 10%;
+    right: -45%;
+}
+#complete .complete-inner .phone-mokup span:nth-of-type(4){
+    top: 50%;
+    right: -65%;
+}
 
 
 
 
+/**/
+/**/
+#free-month{
+    background-color: #ffeb60;
+}
+#free-month .free-month-wrap{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+#free-month .free-month-wrap .price{
+    display: flex;
+    max-width: 1084px;
+    margin: 0 auto;
+    color: #242424;
+}
+#free-month .free-month-wrap .price ul:first-of-type{
+    display: flex;
+    text-align: start;
+}
+#free-month .free-month-wrap .price ul:first-of-type li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 327px;
+    height: 310px;
+    padding: 32px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 20px;
+}
+#free-month .free-month-wrap .price ul:first-of-type li strong{
+    font-weight: 800;
+    font-size: 20px;
+}
+#free-month .free-month-wrap .price ul:first-of-type li div p{
+    font-weight: lighter;
+    font-size: 24px;
+    line-height: 60px;
+}
+#free-month .free-month-wrap .price ul:first-of-type li div{
+    display: flex;
+}
+#free-month .free-month-wrap .price ul:first-of-type li div span{
+    font-weight: 900;
+    font-size: 40px;
+}
+#free-month .free-month-wrap .price ul:first-of-type li div b{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 60px;
+}
+#free-month .free-month-wrap .price ul:first-of-type li>p{
+    font-weight: bold;
+    font-size: 14px;
+    color: #6f6f6f;
+}
+#free-month .free-month-wrap .price ul:nth-of-type(2){
+    height: 310px;
+}
+#free-month .free-month-wrap .price ul:nth-of-type(2) li{
+    width: 327px
+}
 
 
 
@@ -320,6 +469,7 @@ ul li dl dt img{
     text-align: center;
     padding: 70px 0 50px 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 #infinite .bookgroup-container ul li dl dt span.free{
@@ -342,6 +492,12 @@ ul li dl dt img{
 }
 #infinite .bookgroup-container ul li dl dt span.full{
     background: url(../img/badge-full.a98c7199ab8829b059a2386c6f91efca.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#interest ul li dl dt span.pdf-book{
+    background: url(../img/badge-pdf.feba67165f163295a3bf77cfb2bb69b8.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -369,12 +525,14 @@ ul li dl dt img{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-left: 24px;
     overflow-x: auto;
     scrollbar-width: none; /*firefox*/
     cursor: grab;
+    margin: 0 auto;
 }
-
+.booklist-wrap li{
+    margin-left: 24px;
+}
 .title{
     width: 145px;
     font-weight: bold;
@@ -397,6 +555,10 @@ ul li dl dt img{
     color: #6f6f6f;
     font-weight: bold;
     text-align: start;
+}
+.button-bg{
+    background-color: #242424 !important;
+    color: #fff !important;
 }
 
 
