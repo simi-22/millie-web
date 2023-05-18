@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.js" defer></script>
 </head>
 <body>
+    <div id="body-wrap">
     <!---->
     <section id="header-wrap">
         <header id="header">
@@ -18,7 +19,12 @@
                 <span>메뉴열기</span>
             </button>
             </div>
-            <h1 class="header-logo"><a href="#"><img src="img/full-logo.f9246fa0ca04c7cef80a5d0f5409f0be.png" alt="밀리 로고"></a></h1>
+            <h1 class="header-logo">
+                <a href="#">
+                    <img src="img/full-logo.f9246fa0ca04c7cef80a5d0f5409f0be.png" alt="밀리 로고">
+                    <img src="img/simple-logo.41a05d959a43fde14438769b6afa3f19.png" alt="밀리 로고" class="hidden">
+                </a>
+            </h1>
             <div id="menu">
                 <ul>
                     <li><a href="#">기업문의</a></li>
@@ -28,6 +34,9 @@
                 <button class="login-btn">로그인</button>
             </div>
         </header>
+
+       
+       
         <div id="mobile-roll">
             <ul>
                 <li><a href="#">기업문의</a></li>
@@ -57,6 +66,7 @@
     <!---->
     <!---->
     <section id="waiting-book" class="wrap">
+        <div class="fta1">
         <h2 class="ft-h">당신을 기다리는 <br>
             13만권의 도서
         </h2>
@@ -64,6 +74,7 @@
             첫 달 무료 구독을 통해
         <br>어떤 도서가 있는지 확인해보세요
         </p>
+        </div>
         <div class="wb-slider">
             <p></p>
             <p></p>
@@ -75,6 +86,7 @@
     <!---->
     <!---->
     <section id="object" class="wrap">
+        <div class="fta1">
         <h2 class="ft-h">나만의 공간을 아름답게<br>
             채워주는 오브제북
         </h2>
@@ -82,6 +94,7 @@
             이미지와 사운드로 극대화된
         <br>책의 감성을 오롯이 느껴보세요
         </p>
+        </div>
         <div class="object-video-container">
             <div class="object-video">
                 <p class="ob-playbtn"></p>
@@ -97,6 +110,7 @@
     <!---->
     <!---->
     <section id="infinite" class="wrap">
+        <div class="fta1">
         <h2 class="ft-h">싹 다 무제한<br>
             9,900원
         </h2>
@@ -104,6 +118,7 @@
             10년치 베스트셀러
         <br>신간 오디오북 장르 소설까지
         </p>
+        </div>
         <div class="bookgroup-container">
             <div class="best-seller">
             <h3>지금 서점 베스트셀러</h3>
@@ -510,6 +525,7 @@
     <!---->
     <!---->
     <section id="interest" class="wrap">
+        <div class="fta1">
         <h2 class="ft-h">관심분야에 있는 책도<br>
             딱 골라드려요
         </h2>
@@ -517,6 +533,7 @@
             검색어 순위를 통해 뽑은
         <br>인기 분야 책들을 확인해보세요
         </p>
+        </div>
         <ul class="book-section">
             <li><button id="stock-button" class="button-bg">주식</button></li>
             <li><button id="english-button">영어</button></li>
@@ -1133,6 +1150,7 @@
     <!---->
     <!---->
     <section id="complete" class="wrap">
+        <div class="fta1">
         <h2 class="ft-h">당신이 끝까지 읽을 책을<br>
             알려주는 완독지수
         </h2>
@@ -1140,14 +1158,15 @@
             350만 밀리회원이 먼저 읽고
         <br>다 읽을 확률과 예상 시간을 알려드려요
         </p>
+        </div>
         <div class="complete-inner">
             <div class="phone-mokup">
                 <img src="img/reading-mock.3691c0a919be9925e90a19a17794050e.png" alt="밀리 완독지수">
                 <p><img src="img/reading-tooltip.af41ece6e348d4b800680256f27a9892.png" alt="밀리 완독지수"></p>
-                <span><img src="img/reading-card02.f1d517fe9b18dc4a7fcdd58f7f57afbe.png" alt="마니아카드"></span>
-                <span><img src="img/reading-card01.a091cde3f19afee102558704e82eefe6.png" alt="홀릭카드"></span>
-                <span><img src="img/reading-card03.099696781998fdcfbc88f69f81ddd990.png" alt="밀리픽카드"></span>
-                <span><img src="img/reading-card04.178fde7cba62b12c0e4c5ef28fa01528.png" alt="히든카드"></span>
+                <span class="fsa1"><img src="img/reading-card02.f1d517fe9b18dc4a7fcdd58f7f57afbe.png" alt="마니아카드"></span>
+                <span class="fsa1"><img src="img/reading-card01.a091cde3f19afee102558704e82eefe6.png" alt="홀릭카드"></span>
+                <span class="fsa1"><img src="img/reading-card03.099696781998fdcfbc88f69f81ddd990.png" alt="밀리픽카드"></span>
+                <span class="fsa1"><img src="img/reading-card04.178fde7cba62b12c0e4c5ef28fa01528.png" alt="히든카드"></span>
             </div>
         </div>
     </section>
@@ -1157,6 +1176,7 @@
     <!---->
     <!---->
     <section id="free-month" class="wrap">
+        <div class="fta1">
         <h2 class="ft-h">언제든 해지 가능!<br>
             첫 달 무료로 가볍게
         </h2>
@@ -1164,6 +1184,7 @@
             상황에 맞게 원하는 요금제를
         <br>자유롭게 선택하세요
         </p>
+        </div>
         <div class="free-month-wrap">
             <div class="price">
                 <ul>
@@ -1201,7 +1222,7 @@
         <div id ="audio-book" class="content-wrap">
             <div class="content-inner">
                 <div class="content-left">
-                    <div class="left-top">
+                    <div class="left-top fta1">
                         <h3>오디오북</h3>
                         <p>세상에서 가장<br>교양있는 수면제</p>
                         </div>
@@ -1216,20 +1237,20 @@
                         </ul>
                     </div>
                 </div>
-                <div class="content-right">
+                <div class="content-right fta1">
                     <div class="phone-frame">
                         <div class="phone-frame-inner">
                             <p>
-                                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content04.png?v4">
+                                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content04.png?v4" alt="오디오북이미지">
                             </p>
                             <p class="hidden">
-                                <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook2.mp4?v1" autoplay muted loop >
+                                <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook2.mp4?v1" autoplay muted loop></video>
                             </p>
                             <p class="hidden">
-                                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content01.png?v1">
+                                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content01.png?v1" alt="오디오북이미지">
                             </p>
                             <p class="hidden">
-                                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content02.png?v1">
+                                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content02.png?v1" alt="오디오북이미지">
                             </p>
                         </div>
                         <img src="img/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png">
@@ -1261,16 +1282,16 @@
                     <div class="phone-frame">
                         <div class="phone-frame-inner">
                             <p>
-                                <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/sight2.mp4?v1" autoplay muted loop >
+                                <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/sight2.mp4?v1" autoplay muted loop></video>
                             </p>
                             <p class="hidden">
-                                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/viewer-content01.png?v1" >
+                                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/viewer-content01.png?v1" alt="밀리뷰어이미지">
                             </p>
                             <p class="hidden">
-                                <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/darkmode2.mp4" autoplay muted loop>
+                                <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/darkmode2.mp4" autoplay muted loop></video>
                             </p>
                             <p class="hidden">
-                                <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/viewer_system2.mp4?v1" autoplay muted loop >
+                                <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/viewer_system2.mp4?v1" autoplay muted loop></video>
                             </p>
                         </div>
                         <img src="img/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png">
@@ -1289,14 +1310,14 @@
             <li id="question1">
                 <p>안쓰면 정말 환불해주나요?</p>
                 <p>물론입니다. 결제 후 콘텐츠 다운로드 및 열람을 하지 않으셨다면 전액 환불해 드리고 있어요.<br>
-                    <b>[밀리>관리>구독관리>결제 내역 확인]에서 직접 환불이 가능하며,</b><br>
+                    <b>[밀리>관리>구독관리>결제 내역 확인]</b>에서 직접 환불이 가능하며,<br>
                     해결이 어려운 경우 고객센터로 문의 해 주세요
                 </p>
             </li>
             <li id="question2">
                 <p>구독 중 해지 할 수 있나요? 수수료는 없나요?</p>
                 <p>다음달 부터 결제되지 않도록 수수료 없이 해지하실 수 있습니다.<br>
-                    <b>[밀리>관리>구독관리>자동결제 해지]메뉴를 통해 기간에 상관없이 직접 가능해요.</b>
+                    <b>[밀리>관리>구독관리>자동결제 해지]</b> 메뉴를 통해 기간에 상관없이 직접 가능해요.
                 </p>
             </li>
             <li id="question3">
@@ -1317,8 +1338,62 @@
                 </p>
             </li>
         </ul>
-       
     </section>
+
+
+    <!---->
+    <!---->
+    <section id="footer">
+        <footer>
+            <div class="footer-top">
+                <div class="top-left">
+                    <h1>(주) 밀리의 서재</h1>
+                    <p class="business-toggle">사업자 정보 펼쳐보기</p>
+                </div>
+                <div class="top-right">
+                    <ul>
+                        <li><a href="#">인스타그램</a></li>
+                        <li><a href="#">유튜브</a></li>
+                        <li><a href="#">카카오톡</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-middle hidden">
+                <p>
+                    <span>대표이사:서영택</span>
+                    <span>사업자등록번호:423-88-00370</span>
+                    <span>호스팅 제공자:(주)밀리의 서재</span>
+                </p>
+                <p>
+                    <span>통신판매업 신고번호:2016-서울마포-2012호</span>
+                    <span>주소:서울특별시 마포구 양화로 45,16층 (메세나폴리스 세아타워)</span>
+                </p>
+                <p>
+                    <span>고객정보보호 책임자:김태형</span>
+                    <span>마케팅 제휴 문의 : aksdjfkls</span>
+                </p>
+            </div>
+            <div class="footer-bottom">
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#"><b>개인정보처리방침</b></a></li>
+                    <li><a href="#">청소년보호정책</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">B2B 문의</a></li>
+                    <li><a href="#">콘텐츠 제휴문의</a></li>
+                    <li><a href="#">뷰어 다운로드</a></li>
+                    <li><a href="#">회사 소개</a></li>
+                </ul>
+                <p>Copyright ⓒ 2022 밀리의 서재 All Rights Reserved.</p>
+            </div>
+        </footer>
+    </section>
+    </div>
+
+    <!---->
+    <!---->
+    <button id="fixed-button"><b>첫 달 무료</b>로 독서 시작하기</button>
+    
 
 
     <script src="js/main.js"></script>

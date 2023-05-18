@@ -1,30 +1,42 @@
 
+
+//모바일메뉴
+
 const mMenuButton = document.querySelector('#mobile-menu');
-const mMFirst = document.querySelectorAll('#mobile-menu::after');
-const mMSecond = document.querySelector('#mobile-menu::before');
 const mMenu = document.querySelector('#mobile-roll');
-const playButton = document.querySelector('.ob-playbtn');
-const videoBox = document.querySelector('.object-video video');
-const bookSectionButton = document.querySelectorAll('.book-section>li>button');
-const stockSection = document.querySelector('.stock');
-const englishSection = document.querySelector('.english');
-const classicSection = document.querySelector('.classic');
-const interiorSection = document.querySelector('.interior');
-const dietSection = document.querySelector('.diet');
-const contentTitle = document.querySelectorAll('.content-title li')
+const xButton = document.querySelector('#mobile-menu');
 
-
-
-//
 
 const mMenuActive = () => {
     mMenu.classList.toggle('menu-height');
+    xButton.classList.toggle('changes')
 }
 
 mMenuButton.addEventListener('click', mMenuActive)
 
 
-//
+
+//로고
+
+const logoImg = document.querySelectorAll('.header-logo a img');
+let navHeight = 1000;
+
+document.addEventListener('scroll', () => {
+    if (window.scrollY > navHeight) {
+      logoImg[0].classList.add('hidden');
+      logoImg[1].classList.remove('hidden');
+    } else {
+        logoImg[0].classList.remove('hidden');
+        logoImg[1].classList.add('hidden');
+    }
+  });
+
+
+
+//object
+const playButton = document.querySelector('.ob-playbtn');
+const videoBox = document.querySelector('.object-video video');
+
 const objectVideoPlay = () => {
     playButton.classList.add('hidden');
     videoBox.classList.add('show');
@@ -56,33 +68,17 @@ videoPause.addEventListener('click', videoPauseEvent)
 
 
 
-
-//
-
-
-const viewerBoxButton =document.querySelector('#v-button')
-const audioBoxButton = document.querySelector('#a-button')
-const audioBookZone = document.querySelector('#audio-book');
-const viewerBookZone = document.querySelector('#viewer-book');
-
-viewerBoxButton.addEventListener('click', function(){
-    audioBookZone.classList.add('hidden');
-    viewerBookZone.classList.remove('hidden');
-    audioBoxButton.classList.remove('content-title-bg');
-    viewerBoxButton.classList.add('content-title-bg');
-})
-
-audioBoxButton.addEventListener('click', function(){
-    audioBookZone.classList.remove('hidden');
-    viewerBookZone.classList.add('hidden');
-    audioBoxButton.classList.add('content-title-bg');
-    viewerBoxButton.classList.remove('content-title-bg');
-})
+//interest
 
 
+const bookSectionButton = document.querySelectorAll('.book-section>li>button');
+const stockSection = document.querySelector('.stock');
+const englishSection = document.querySelector('.english');
+const classicSection = document.querySelector('.classic');
+const interiorSection = document.querySelector('.interior');
+const dietSection = document.querySelector('.diet');
+//const contentTitle = document.querySelectorAll('.content-title li')
 
-
-//
 for(let i = 0 ; i<bookSectionButton.length ; i++){
     bookSectionButton[i].addEventListener('click',function(event){filter(event)});
 }
@@ -137,7 +133,32 @@ function filter(event){
 }
 
 
-//
+//millie-content
+
+
+const viewerBoxButton =document.querySelector('#v-button')
+const audioBoxButton = document.querySelector('#a-button')
+const audioBookZone = document.querySelector('#audio-book');
+const viewerBookZone = document.querySelector('#viewer-book');
+
+viewerBoxButton.addEventListener('click', function(){
+    audioBookZone.classList.add('hidden');
+    viewerBookZone.classList.remove('hidden');
+    audioBoxButton.classList.remove('content-title-bg');
+    viewerBoxButton.classList.add('content-title-bg');
+})
+
+audioBoxButton.addEventListener('click', function(){
+    audioBookZone.classList.remove('hidden');
+    viewerBookZone.classList.add('hidden');
+    audioBoxButton.classList.add('content-title-bg');
+    viewerBoxButton.classList.remove('content-title-bg');
+})
+
+
+
+
+
 
 const audioBookButton = document.querySelectorAll('.audio-book-button li button')
 const viewerButton = document.querySelectorAll('.millie-viewer-button li button')
@@ -149,7 +170,6 @@ const viewerContentVideo = document.querySelectorAll('#viewer-book .phone-frame 
 const viewerContentTitle = document.querySelector('#viewer-book .left-bottom b');
 const viewerContentComment = document.querySelector('#viewer-book .left-bottom span');
 
-console.log(viewerContentTitle)
 
 for(let i = 0 ; i<audioBookButton.length ; i++){
     audioBookButton[i].addEventListener('click',function(e){contentFilter(e)});
@@ -271,6 +291,8 @@ function viewerFilter(k){
 }
 
 
+//질문
+
 const questionList = document.querySelectorAll('#question ul li');
 
 for(let i = 0 ; i < questionList.length; i++){
@@ -280,14 +302,53 @@ questionList[i].addEventListener('click', function(s){wideList(s)});
 function wideList(s){
     mode = s.target.id
     if(mode === "question1"){
-        questionList[0].classList.toggle('list-height')
+        questionList[0].classList.toggle('list-height1')
     }if(mode === "question2"){
-        questionList[1].classList.toggle('list-height')
+        questionList[1].classList.toggle('list-height2')
     }if(mode === "question3"){
-        questionList[2].classList.toggle('list-height')
+        questionList[2].classList.toggle('list-height3')
     }else if(mode === "question4"){
-        questionList[3].classList.toggle('list-height')
+        questionList[3].classList.toggle('list-height4')
     }
 }
 
-console.log(questionList)
+
+const footerToggle = document.querySelector('.business-toggle');
+
+footerToggle.addEventListener('click',function(){
+    const footerHiddenContent = document.querySelector('.footer-middle');
+    footerToggle.classList.toggle('change')
+    footerHiddenContent.classList.toggle('hidden')
+})
+
+
+
+//스크롤 애니메이션
+const fadeElementList = document.querySelectorAll('.fta1');
+const squalElementList = document.querySelectorAll('.fsa1');
+
+const fadeFunc = function() {
+for (const element of fadeElementList) {
+    if (!element.classList.contains('fade-ani')) {
+    if (window.innerHeight > element.getBoundingClientRect().top) {
+        element.classList.add('fade-ani');
+    }
+    }
+}
+}
+
+const squalFunc = function() {
+for (const element of squalElementList) {
+    if (!element.classList.contains('squal-ani')) {
+    if (window.innerHeight > element.getBoundingClientRect().top) {
+        element.classList.add('squal-ani');
+    }
+    }
+}
+}
+
+window.addEventListener('load', fadeFunc);
+window.addEventListener('scroll', fadeFunc);
+
+window.addEventListener('load', squalFunc);
+window.addEventListener('scroll', squalFunc);
