@@ -9,7 +9,7 @@ const xButton = document.querySelector('#mobile-menu');
 
 const mMenuActive = () => {
     mMenu.classList.toggle('menu-height');
-    xButton.classList.toggle('changes')
+    xButton.classList.toggle('changes');
 }
 
 mMenuButton.addEventListener('click', mMenuActive)
@@ -97,7 +97,7 @@ const render = () => {
 }
 
 function filter(event){
-    mode = event.target.id
+    let mode = event.target.id
     
     
     if( mode === "stock-button"){
@@ -187,7 +187,7 @@ const contentRender = () => {
 }
 
 function contentFilter(e){
-    mode = e.target.id
+    let mode = e.target.id
     
     
     if( mode === "c-button1"){
@@ -249,7 +249,7 @@ const viewerRender = () => {
 }
 
 function viewerFilter(k){
-    mode = k.target.id
+    let mode = k.target.id
     
     if( mode === "c-button1"){
        
@@ -296,11 +296,11 @@ function viewerFilter(k){
 const questionList = document.querySelectorAll('#question ul li');
 
 for(let i = 0 ; i < questionList.length; i++){
-questionList[i].addEventListener('click', function(s){wideList(s)});
+    questionList[i].addEventListener('click', function(s){wideList(s)});
 }
 
 function wideList(s){
-    mode = s.target.id
+    let mode = s.target.id
     if(mode === "question1"){
         questionList[0].classList.toggle('list-height1')
     }if(mode === "question2"){
@@ -317,9 +317,13 @@ const footerToggle = document.querySelector('.business-toggle');
 
 footerToggle.addEventListener('click',function(){
     const footerHiddenContent = document.querySelector('.footer-middle');
-    footerToggle.classList.toggle('change')
-    footerHiddenContent.classList.toggle('hidden')
+    footerToggle.classList.toggle('change');
+    footerHiddenContent.classList.toggle('hidden');
 })
+
+
+
+
 
 
 
@@ -332,9 +336,16 @@ for (const element of fadeElementList) {
     if (!element.classList.contains('fade-ani')) {
     if (window.innerHeight > element.getBoundingClientRect().top) {
         element.classList.add('fade-ani');
-    }
-    }
-}
+            }
+    }else if(element.classList.contains('fade-ani')){
+        if(window.scrollY == 0){
+            element.classList.remove('fade-ani');
+        }else if(window.innerHeight > element.getBoundingClientRect().top + 1500){
+        element.classList.remove('fade-ani');
+        }
+     }
+    
+    } 
 }
 
 const squalFunc = function() {
@@ -349,6 +360,7 @@ for (const element of squalElementList) {
 
 window.addEventListener('load', fadeFunc);
 window.addEventListener('scroll', fadeFunc);
+
 
 window.addEventListener('load', squalFunc);
 window.addEventListener('scroll', squalFunc);

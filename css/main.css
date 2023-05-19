@@ -16,9 +16,6 @@
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.mainv-content h1{
-    animation: mainv-fade-ani 1.8s forwards;
-}
 #main-visual{
     width: 100%;
     height: 840px;
@@ -574,7 +571,6 @@ ul li dl dt img{
 
 #millie-content{
     width: 100%;
-    overflow: hidden;
 }
 
 #millie-content ul.content-title{
@@ -812,15 +808,62 @@ border-radius: 80px;
 }
 
 
-
-
+/**/
+/**/
+#money{
+    display: flex;
+    height: 750px;
+    background-color: #f7f7f7;
+    
+}
+#money .money-inner{ 
+    position: relative;
+    background: url(../img/review-bg.7113d143354a257d6ddad264072b913e.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 240px;
+    height: 510px;
+    width: 100%;
+}
+#money div div{
+    width: 40%;
+}
+#money div div:first-of-type{
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    margin-left: -550px;
+    height: 415px;
+    z-index: 5;
+}
+#money > div > p{
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    margin-left: -550px;
+    height: 415px;
+    width: 415px;
+    background: url(../img/youtube_poster.7e27bb6646f3d3221f0f351564068ca5.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+#money div div:last-of-type{
+    float: right;
+}
+#money div div h2{
+    text-align: start;
+}
+#money div div p{
+    text-align: start;
+}
 
 
 
     
 @keyframes mainv-fade-ani {
     0% {
-        transform: translate3d(0,50%,0);
+        transform: translate3d(0,40%,0);
         opacity: 0;
     }
     100% {
@@ -855,7 +898,9 @@ border-radius: 80px;
 .fade-ani{
     animation: mainv-fade-ani 2s forwards;
 }
-
+.fta1{
+    opacity: 0;
+}
 .ft-h{
     font-size: 49px;
     margin-bottom: 40px;
