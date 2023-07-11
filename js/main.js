@@ -294,9 +294,10 @@ function viewerFilter(k){
 //질문
 
 const questionList = document.querySelectorAll('#question ul li');
+const questionListButton = document.querySelectorAll('#question ul li p:first-of-type');
 
-for(let i = 0 ; i < questionList.length; i++){
-    questionList[i].addEventListener('click', function(s){wideList(s)});
+for(let i = 0 ; i < questionListButton.length; i++){
+    questionListButton[i].addEventListener('click', function(s){wideList(s)});
 }
 
 function wideList(s){
@@ -329,7 +330,7 @@ footerToggle.addEventListener('click',function(){
 
 //스크롤 애니메이션
 const fadeElementList = document.querySelectorAll('.fta1');
-const squalElementList = document.querySelectorAll('.fsa1');
+const squareElementList = document.querySelectorAll('.fsa1');
 
 const fadeFunc = function() {
 for (const element of fadeElementList) {
@@ -348,11 +349,11 @@ for (const element of fadeElementList) {
     } 
 }
 
-const squalFunc = function() {
-for (const element of squalElementList) {
-    if (!element.classList.contains('squal-ani')) {
+const squareFunc = function() {
+for (const element of squareElementList) {
+    if (!element.classList.contains('square-ani')) {
     if (window.innerHeight > element.getBoundingClientRect().top) {
-        element.classList.add('squal-ani');
+        element.classList.add('square-ani');
     }
     }
 }
@@ -362,5 +363,5 @@ window.addEventListener('load', fadeFunc);
 window.addEventListener('scroll', fadeFunc);
 
 
-window.addEventListener('load', squalFunc);
-window.addEventListener('scroll', squalFunc);
+window.addEventListener('load', squareFunc);
+window.addEventListener('scroll', squareFunc);
