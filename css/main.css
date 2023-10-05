@@ -571,6 +571,7 @@ ul li dl dt img{
 
 #millie-content{
     width: 100%;
+    overflow: hidden;
 }
 
 #millie-content ul.content-title{
